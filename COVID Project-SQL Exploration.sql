@@ -1,12 +1,15 @@
+/* COVID 19 Data Exploration
+
+Skills used:Joins,CTE's,Temp Tables,Window Functions,Aggregare Functions,Creating Views,Converting Data Types
+
+*/
 Select *
 From [Portfolio Project]..CovidDeaths
 where continent is not null
 Order by 3,4
 
---Select *
---From [Portfolio Project]..CovidVaccinations
---Order by 3,4
-
+--Select Data that we are going to start with
+	
 Select location,date,total_cases,new_cases,total_deaths,population
 From [Portfolio Project]..CovidDeaths
 where continent is not null
@@ -46,7 +49,7 @@ where continent is not null
 Group by location
 order by TotalDeathCount Desc
 
---Lets break things Down by Continent
+--Breaking things Down by Continent
 
 --Showing continents with the highest Death Count per Population
 
@@ -86,7 +89,7 @@ join [Portfolio Project]..CovidVaccinations vac
 where dea.continent is not null
 order by 2,3
 
---Use CTE
+--Use CTE to perform Calculation on Partition By 
 
 with PopvsVac (Continent,location,Date,Population,New_Vaccinations,RollingPeopleVaccinated)
 as
