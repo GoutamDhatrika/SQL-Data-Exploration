@@ -15,3 +15,6 @@ Performed the following tasks:
 - Comparison between Total population and COVID vaccinations
 - Using Temp Table to perform Calculation on Partition By in the previous query
 - Creating a View to store data for later visualizations
+
+# Dashboard link
+https://public.tableau.com/app/profile/goutam.dhatrika/viz/Covid-19Project_16935618433440/Dashboard1
